@@ -2,7 +2,7 @@ package pagesObject;
 
 import org.openqa.selenium.By;
 
-public class AdministrationProductAddSingle {
+public class AdministrationProductAddEditSingle {
 
     public static By btn(String btnName) {
         return By.xpath("//button[text()='"+btnName+"']");
@@ -28,8 +28,8 @@ public class AdministrationProductAddSingle {
         return By.xpath("//h6[contains(.,'Variant "+productIndex+"')]/parent::div/div[2]/descendant::*[@data-testid='DeleteIcon']["+stockIndex+"]");
     }
 
-    public static By inputProductMedia(int mediaIndex) {
-        return By.xpath("//div/descendant::h6[text()='Product Media']/parent::div/following-sibling::div[1]/descendant::span[text()='Upload photo']["+mediaIndex+"]");
+    public static By uploadProductMedia(int mediaIndex) {
+        return By.xpath("//div/descendant::h6[text()='Product Media']/parent::div/following-sibling::div[1]/descendant::input[@accept='image/jpeg,image/png,image/jpg']["+mediaIndex+"]");
     }
 
     public static By deleteProductMedia(int mediaIndex) {
@@ -40,7 +40,7 @@ public class AdministrationProductAddSingle {
         return By.xpath("(//div[h6[text()='Product Variant']]/following-sibling::div[1]/descendant::h6[contains(text(), 'Variant')]["+variantIndex+"]/following-sibling::div/descendant::*[contains(@data-testid, 'DeleteIcon')])[1]");
     }
 
-    public static By inputVariantPhoto(int variantIndex) {
+    public static By uploadVariantPhoto(int variantIndex) {
         return By.xpath("//div[h6[text()='Product Variant']]/following-sibling::div[1]/descendant::h6[contains(text(), 'Variant')]["+variantIndex+"]/following-sibling::div/descendant::*[contains(@role, 'img')]");
     }
 

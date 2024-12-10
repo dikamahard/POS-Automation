@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 
 public class AdministrationMerchantAddEdit {
 
-    public static By uploadLogo = By.xpath("(//img[@alt='avatar'])[1]");
+    public static By uploadLogo = By.xpath("//h6[text()='Merchant Logo']/parent::div/following-sibling::div/descendant::input[@accept='image/jpeg,image/png,image/jpg']");
 
-    public static By uploadPIC = By.xpath("(//img[@alt='avatar'])[2]");
+    public static By uploadPIC = By.xpath("//h6[text()='Merchant PIC']/parent::div/following-sibling::div/descendant::input[@accept='image/jpeg,image/png,image/jpg']");
+
+    public static By fileTypeImageValidation = By.xpath("//p[text()='File type must be image/jpeg,image/png,image/jpg']");
 
     public static By btn(String btnName) {
         return By.xpath("//button[text()='"+btnName+"']");

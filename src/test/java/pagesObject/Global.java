@@ -56,4 +56,26 @@ public class Global {
 
     public static By btnCalendar = By.xpath("//button/*[@data-testid='CalendarIcon']");
 
+    public static By errorValidation(String errorMsg) {
+        return By.xpath("//p[contains(@class, 'Mui-error') and text()='"+errorMsg+"']");
+    }
+
+    public static By ErrorValidationExist() {
+        return By.xpath("//p[contains(@class, 'Mui-error')]");
+    }
+
+    public static By alertToast(String toastMsg) {
+        return By.xpath("//div[@role='alert']/descendant::*[text()='"+toastMsg+"']");
+    }
+
+    public static By errorMessage(String  errorMsg) {
+        return By.xpath("//div[contains(@class,'MuiAlert-message') and text()='"+errorMsg+"']");
+    }
+
+    public static By errorMessageExist() {
+        return By.xpath("//div[contains(@class,'MuiAlert-message')]");
+    }
+
+    public static By fileTypeImageValidation = By.xpath("//p[text()='File type must be image/jpeg,image/png,image/jpg']");
+
 }

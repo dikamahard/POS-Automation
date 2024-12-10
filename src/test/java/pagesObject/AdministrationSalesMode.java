@@ -23,5 +23,5 @@ public class AdministrationSalesMode {
     public static By btn(String btnName) {
         return By.xpath("//button[text()='"+btnName+"']");
     }
-    
+
 }

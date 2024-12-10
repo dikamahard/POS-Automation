@@ -2,7 +2,7 @@ package pagesObject;
 
 import org.openqa.selenium.By;
 
-public class AdministrationFurnitureDetail {
+public class AdministrationFurnitureAddEdit {
     public static By inputWithoutExplain(String dataName) {
         return By.xpath("//div[label[text()='"+dataName+"']]");
     }
